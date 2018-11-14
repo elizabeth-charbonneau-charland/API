@@ -27,7 +27,7 @@ class AccountService
 
     private function getUserId() {
         $userEmail = $_SESSION['email'];
-        $selectUser = $this->connection->prepare("SELECT ID FROM user WHERE email = ?");
+        $selectUser = $this->connection->prepare("SELECT ID FROM User WHERE email = ?");
         $selectUser->bind_param("s", $userEmail);
         $selectUser->execute();
         $result = $selectUser->get_result()->fetch_all();
@@ -35,7 +35,7 @@ class AccountService
     }
 
     private function getAccountType($type) {
-        $selectType = $this->connection->prepare("SELECT ID FROM account_type WHERE type = ?");
+        $selectType = $this->connection->prepare("SELECT ID FROM Account_Type WHERE type = ?");
         $selectType->bind_param("s", $type);
         $selectType->execute();
         $result = $selectType->get_result()->fetch_all();
@@ -44,7 +44,7 @@ class AccountService
 
     function getAccounts() {
         $owner = $this->getUserId();
-        $selectAccount = $this->connection->prepare("SELECT account.ID as id, type, amount, name FROM account JOIN account_type ON account.account_type = account_type.ID WHERE owner = ? ");
+        $selectAccount = $this->connection->prepare("SELECT Account.ID as id, type, amount, name FROM Account JOIN Account_Type ON Account.account_type = Account_Type.ID WHERE owner = ? ");
         $selectAccount->bind_param("s", $owner);
         $selectAccount->execute();
         $result = $selectAccount->get_result()->fetch_all(MYSQLI_ASSOC);
@@ -52,7 +52,7 @@ class AccountService
     }
 
     function receiveDeposit($id, $amount) {
-        $deposit = $this->connection->prepare("UPDATE account SET amount = amount + ? WHERE ID = ?");
+        $deposit = $this->connection->prepare("UPDATE Account SET amount = amount + ? WHERE ID = ?");
         $deposit->bind_param("ss", $amount, $id);
         $deposit->execute();
         return $deposit->affected_rows == 1;

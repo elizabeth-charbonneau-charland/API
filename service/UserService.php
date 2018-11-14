@@ -28,7 +28,7 @@ class UserService
 
     private function createUser($first_name, $last_name,$email, $password): void
     {
-        $sql = "INSERT INTO user (first_name,last_name,email,password) VALUES (?,?,?,sha1(?))";
+        $sql = "INSERT INTO User (first_name,last_name,email,password) VALUES (?,?,?,sha1(?))";
         $statement = $this->connection->prepare($sql);
         $statement->bind_param("ssss", $first_name, $last_name, $email, $password);
         $statement->execute();
@@ -36,7 +36,7 @@ class UserService
 
     private function userExists($email)
     {
-        $selectUser = $this->connection->prepare("SELECT count(*) FROM user WHERE email = ?");
+        $selectUser = $this->connection->prepare("SELECT count(*) FROM User WHERE email = ?");
         $selectUser->bind_param("s", $email);
         $selectUser->execute();
         $result = $selectUser->get_result()->fetch_all();
@@ -49,7 +49,7 @@ class UserService
     }
 
     public function login($email, $password) {
-        $selectUser = $this->connection->prepare("SELECT count(*) FROM user WHERE email = ? and password = sha1(?)");
+        $selectUser = $this->connection->prepare("SELECT count(*) FROM User WHERE email = ? and password = sha1(?)");
         $selectUser->bind_param("ss", $email, $password);
         $selectUser->execute();
         $result = $selectUser->get_result()->fetch_all();
