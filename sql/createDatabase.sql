@@ -27,7 +27,17 @@ CREATE TABLE `Account` (
    FOREIGN KEY (account_type) REFERENCES Account_Type(ID)
 );
 
+CREATE TABLE `Providers` (
+  `ID`  INTEGER AUTO_INCREMENT,
+  `name` VARCHAR (100),
+  PRIMARY KEY (`ID`)
+);
+
 INSERT INTO `Account_Type` (type)
 VALUES ('checking'),('savings')
+
+
+INSERT INTO `Providers` (name)
+VALUES ('Videotron S.E.N.C.'),('Bell Canada Inc.'),('Visa Scotia'),('Visa Desjardins'),('Mastercard BMO')
 
 
