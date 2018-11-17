@@ -19,9 +19,9 @@ class AccountService
     {
         $account_type = $this->getAccountType($type);
         $owner = $this->getUserId();
-        $sql = "INSERT INTO account (owner, name, account_type, amount, ID) VALUES (?,?,?,?,?)";
+        $sql = "INSERT INTO Account (owner, name, account_type, amount) VALUES (?,?,?,?)";
         $statement = $this->connection->prepare($sql);
-        $statement->bind_param("sssss", $owner, $name, $account_type, $amount, $ID );
+        $statement->bind_param("ssss", $owner, $name, $account_type, $amount);
         $statement->execute();
     }
 

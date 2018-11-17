@@ -23,7 +23,7 @@ CREATE TABLE `Account` (
    `account_type` INTEGER,
   `amount` Varchar(50),
   PRIMARY KEY (`ID`),
-  FOREIGN KEY (owner) REFERENCES USER(ID),
+  FOREIGN KEY (owner) REFERENCES User(ID),
    FOREIGN KEY (account_type) REFERENCES Account_Type(ID)
 );
 
