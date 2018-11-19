@@ -13,7 +13,7 @@ if(!($montant > 0)) {
     echo json_encode(array('status'  => 'FAILURE'));
 } else {
     $AccountService = new AccountService();
-    if ($AccountService->receiveDeposit($compte, $montant)) {
+    if ($AccountService->applyTransaction($compte, $montant)) {
         http_response_code(200);
         echo json_encode(array('status'  => 'OK'));
     } else {

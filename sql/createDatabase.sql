@@ -33,6 +33,14 @@ CREATE TABLE `Providers` (
   PRIMARY KEY (`ID`)
 );
 
+CREATE TABLE `Transfer` (
+  `ID`  VARCHAR(50) ,
+  `amount` VARCHAR (100),
+  `account` INTEGER,
+  PRIMARY KEY (`ID`),
+  FOREIGN KEY (account) REFERENCES Account(ID)
+);
+
 INSERT INTO `Account_Type` (type)
 VALUES ('checking'),('savings')
 

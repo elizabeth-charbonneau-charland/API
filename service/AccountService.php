@@ -51,11 +51,24 @@ class AccountService
         return $result;
     }
 
-    function receiveDeposit($id, $amount) {
+    function applyTransaction($id, $amount) {
         $deposit = $this->connection->prepare("UPDATE Account SET amount = amount + ? WHERE ID = ?");
         $deposit->bind_param("ss", $amount, $id);
         $deposit->execute();
         return $deposit->affected_rows == 1;
+    }
 
+    function registerTransaction($id, $amount, $idTransaction) {
+        $deposit = $this->connection->prepare("INSERT INTO Transfer (ID, amount, account) VALUES (?, ?, ?)");
+        $deposit->bind_param("sss", $idTransaction, $amount, $id);
+        $deposit->execute();
+    }
+
+    public function getTransaction($account) {
+        $select = $this->connection->prepare("SELECT * FROM Transfer WHERE account = ?");
+        $select->bind_param("s", $account);
+        $select->execute();
+        $result = $select->get_result()->fetch_all(MYSQLI_ASSOC);
+        return $result;
     }
 }
