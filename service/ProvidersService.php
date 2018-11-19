@@ -16,7 +16,7 @@ class ProvidersService
     }
 
    public function getProvidersList() {
-        $select = $this->connection->query("SELECT name FROM providers");
+        $select = $this->connection->query("SELECT name FROM Providers");
         return  $select->fetch_all(MYSQLI_ASSOC);
     }
 }

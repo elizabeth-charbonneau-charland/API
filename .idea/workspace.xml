@@ -4,15 +4,7 @@
     <bookmark url="file://$PROJECT_DIR$/service/UserService.php" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="cd7baef8-b564-476a-9ad8-b52f2338582a" name="Default" comment="non">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/create-account.php" beforeDir="false" afterPath="$PROJECT_DIR$/api/create-account.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/interax.php" beforeDir="false" afterPath="$PROJECT_DIR$/api/interax.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/providers.php" beforeDir="false" afterPath="$PROJECT_DIR$/api/providers.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/transfer.php" beforeDir="false" afterPath="$PROJECT_DIR$/api/transfer.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/service/AccountService.php" beforeDir="false" afterPath="$PROJECT_DIR$/service/AccountService.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sql/createDatabase.sql" beforeDir="false" afterPath="$PROJECT_DIR$/sql/createDatabase.sql" afterDir="false" />
-    </list>
+    <list default="true" id="cd7baef8-b564-476a-9ad8-b52f2338582a" name="Default" comment="non" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -160,7 +152,7 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/api/providers.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="280">
@@ -187,11 +179,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/sql/createDatabase.sql">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="640">
-              <caret line="32" column="20" selection-start-line="32" selection-start-column="20" selection-end-line="32" selection-end-column="20" />
+            <state relative-caret-position="427">
+              <caret line="35" column="25" lean-forward="true" selection-end-line="51" />
             </state>
           </provider>
         </entry>
@@ -365,12 +357,12 @@
       <workItem from="1542064884643" duration="7871000" />
       <workItem from="1542153226581" duration="1186000" />
       <workItem from="1542230740401" duration="40605000" />
-      <workItem from="1542648306406" duration="655000" />
+      <workItem from="1542648306406" duration="739000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="90069000" />
+    <option name="totallyTimeSpent" value="90153000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1696" height="1026" extended-state="6" />
@@ -578,13 +570,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/sql/createDatabase.sql">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="640">
-          <caret line="32" column="20" selection-start-line="32" selection-start-column="20" selection-end-line="32" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/database/database.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="300">
@@ -603,6 +588,13 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="280">
           <caret line="14" column="26" lean-forward="true" selection-start-line="14" selection-start-column="26" selection-end-line="14" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sql/createDatabase.sql">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="427">
+          <caret line="35" column="25" lean-forward="true" selection-end-line="51" />
         </state>
       </provider>
     </entry>
