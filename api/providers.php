@@ -22,7 +22,7 @@ if(!($montant > 0)) {
     echo json_encode(array('status'  => 'FAILURE'));
 } else {
     $AccountService = new AccountService();
-    if ($AccountService->applyTransaction($compte, $montant)) {
+    if ($AccountService->applyTransaction($compte, - $montant)) {
         http_response_code(200);
     } else {
         http_response_code(400);
